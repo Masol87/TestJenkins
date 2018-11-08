@@ -5,7 +5,7 @@ node {
         sh 'git clone https://github.com/Masol87/TestJenkins.git'
         
     stage 'Create WAR file for the Progect'
-        sh '/var/lib/jenkins/workspace/test_3/TestJenkins/src/main/webapp'
+        sh 'cd /var/lib/jenkins/workspace/test_3/TestJenkins/src/main/webapp'
         sh 'jar -cvf MyWebApp.war *'
 
     stage 'Deploy war to TomCat'
